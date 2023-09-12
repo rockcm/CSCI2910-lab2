@@ -73,8 +73,8 @@ Dictionary<string, List<VideoGame>> myDictionary = videoGames
 
 //going through each key and taking the top 5 of each platforms global sales 
 var top5ItemsByKey = myDictionary.ToDictionary(
-           kvp => kvp.Key,
-           kvp => kvp.Value.OrderByDescending(item => item.global_Sales).Take(5).ToList()
+           kvp => kvp.Key, // gets the keys
+           kvp => kvp.Value.OrderByDescending(item => item.global_Sales).Take(5).ToList() // gets the top 5 values for global sales of each key. 
        );
 
 
@@ -88,8 +88,6 @@ foreach (var kvp in top5ItemsByKey)
     }
     Console.WriteLine();
 }
-
-
 
 /*
 // prints all global sales for all platforms 
