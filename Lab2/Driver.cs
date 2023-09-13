@@ -81,7 +81,7 @@ var top5ItemsByKey = myDictionary.ToDictionary(
 //displaying each platforms top 5 selling games 
 foreach (var kvp in top5ItemsByKey)
 {
-    Console.WriteLine($"Key: {kvp.Key}");
+    Console.WriteLine($"Platform: {kvp.Key}");
     foreach (var item in kvp.Value)
     {
         Console.WriteLine($"Name: {item.name}, Sales: {item.global_Sales}");
