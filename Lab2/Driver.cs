@@ -72,19 +72,19 @@ Dictionary<string, List<VideoGame>> myDictionary = videoGames
 .GroupBy(o => o.platform).ToDictionary(g => g.Key, g => g.ToList());
 
 //going through each key and taking the top 5 of each platforms global sales 
-var top5ItemsByKey = myDictionary.ToDictionary(
+var top5Games = myDictionary.ToDictionary(
            kvp => kvp.Key, // gets the keys
            kvp => kvp.Value.OrderByDescending(item => item.global_Sales).Take(5).ToList() // gets the top 5 values for global sales of each key. 
        );
 
 
 //displaying each platforms top 5 selling games 
-foreach (var kvp in top5ItemsByKey)
+foreach (var kvp in top5Games)
 {
     Console.WriteLine($"Platform: {kvp.Key}");
     foreach (var item in kvp.Value)
     {
-        Console.WriteLine($"Name: {item.name}, Sales: {item.global_Sales}");
+        Console.WriteLine($"Game: {item.name}, Sales: {item.global_Sales}");
     }
     Console.WriteLine();
 }
