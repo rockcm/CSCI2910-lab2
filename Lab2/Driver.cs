@@ -1,8 +1,8 @@
 ﻿////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///
 //	Solution/Project:  Lab 2 
-//	File Name:         VideoGame.cs
-//	Description:       class to create a vidoegame object for use in driver.  
+//	File Name:         Driver.cs
+//	Description:       implements video game objects as a dictionary with key to platform. Prints top 5 of platforms sales
 //	Course:            CSCI-2910
 //	Author:            Christian Rock, rockcm@etsu.edu, East Tennessee State University
 //	Created:           09/12/23
